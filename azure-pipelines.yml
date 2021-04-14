@@ -7,19 +7,20 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: Selfhostedagent
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'AzureRmPipeline-conn'
+    azureResourceManagerConnection: 'Azure for Students(85761fe3-4247-47ee-af51-7c2890a29d2a)'
     subscriptionId: '85761fe3-4247-47ee-af51-7c2890a29d2a'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'sel_group'
-    location: 'Central US'
+    location: 'Canada Central'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/kritarth532/AzureRmPipeline-repo'
-    overrideParameters: 'VmDeployment'
+    csmFileLink: 'https://raw.githubusercontent.com/kritarth532/AzureRmPipeline-repo/master/CreateVm/azuredeploy.json'
+    overrideParameters: 'myarmpipeline'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
+    addSpnToEnvironment: true

@@ -1,15 +1,12 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "virtualMachines_selfhosted_name": {
-            "value": null
-        },
-        "disks_selfhosted_disk1_770afce6b9f54f728390a29f37243451_externalid": {
-            "value": null
-        },
-        "networkInterfaces_selfhosted660_externalid": {
-            "value": null
-        }
-    }
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+  },
+  "variables": {
+  },
+  "resources": [
+  ],
+  "outputs": {
+  }
 }
